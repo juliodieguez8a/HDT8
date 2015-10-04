@@ -1,3 +1,5 @@
+package HDT8.src;
+
 /**Universidad Del Valle de Guatemala 
  *Algoritmos y Estructura de Datos 
  *Seccion 10- Hoja de Trabajo 8
