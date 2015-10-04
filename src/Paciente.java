@@ -1,4 +1,3 @@
-package HDT8.src;
 
 /**Universidad Del Valle de Guatemala 
  *Algoritmos y Estructura de Datos 
