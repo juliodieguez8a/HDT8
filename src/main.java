@@ -25,15 +25,23 @@ public class main {
 		} catch (IOException e) {
 			System.out.println("error");
 		}
+        System.out.println("Atención de emergencias que usa la implementación \nproporcionada por el Java Collection Framework\n");
         
-        
-        VectorHeap heap = new VectorHeap(listado_pacientes);
+        VectorHeap v_heap = new VectorHeap(listado_pacientes);
 		String ordenados="";
-        while(heap.iterator().hasNext()){
-			Paciente paciente = (Paciente) heap.poll();
-			ordenados +=paciente.toString()+"\n";
+        while(v_heap.iterator().hasNext()){
+			Paciente paciente = (Paciente) v_heap.poll();
+			ordenados += paciente.toString()+"\n";
+		}
+		System.out.println(ordenados);
+		
+		ordenados="";
+		VectorHeap_implementa v_heap2 = new VectorHeap_implementa(listado_pacientes);
+		for(int i=0; i<=(v_heap2.size()); i++){
+			Paciente paciente = (Paciente)v_heap2.remove();
+			ordenados += paciente.toString()+"\n";
 		}
 		System.out.println(ordenados);
 	}
-
+	
 }
