@@ -11,6 +11,9 @@ public class Paciente<E> implements Comparable<E> {
 		code=new_code;
 	}
 	
+	public String toString(){
+		return name+", "+sintoma+", "+code;
+	}
 	public String getCode(){
 		return code;
 	}

@@ -20,7 +20,7 @@ public class main {
 				//separador de frases
 			    separador=line.split(",");
 			    listado_pacientes.add(new Paciente(separador[0], separador[1], separador[2]));
-			    System.out.print(separador[0]+separador[1]+separador[2]);
+			    //System.out.print(separador[0]+separador[1]+separador[2]);
 			}
 		} catch (IOException e) {
 			System.out.println("error");
@@ -28,7 +28,12 @@ public class main {
         
         
         VectorHeap heap = new VectorHeap(listado_pacientes);
-        
+		String ordenados="";
+        while(heap.iterator().hasNext()){
+			Paciente paciente = (Paciente) heap.poll();
+			ordenados +=paciente.toString()+"\n";
+		}
+		System.out.println(ordenados);
 	}
 
 }
