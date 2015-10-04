@@ -25,7 +25,15 @@ public class main {
 		} catch (IOException e) {
 			System.out.println("error");
 		}
-        System.out.println("Atención de emergencias que usa la implementación \nproporcionada por el Java Collection Framework\n");
+        
+        //imprimir listado de pacientes original
+        System.out.println("Listado Original\n");
+        for(int i=0; i<listado_pacientes.size(); i++){
+            System.out.println(listado_pacientes.get(i));
+		}
+
+        
+        System.out.println("\nAtención de emergencias que usa la implementación \nproporcionada por el Java Collection Framework\n");
         
         VectorHeap v_heap = new VectorHeap(listado_pacientes);
 		String ordenados="";
@@ -33,14 +41,21 @@ public class main {
 			Paciente paciente = (Paciente) v_heap.poll();
 			ordenados += paciente.toString()+"\n";
 		}
+		
+		
 		System.out.println(ordenados);
+		
+		System.out.println("Atención de emergencias que usa su implementación de VectorHeap\n");
 		
 		ordenados="";
 		VectorHeap_implementa v_heap2 = new VectorHeap_implementa(listado_pacientes);
-		for(int i=0; i<=(v_heap2.size()); i++){
+		int size=v_heap2.size();
+		
+		for(int i=0; i<size; i++){
 			Paciente paciente = (Paciente)v_heap2.remove();
 			ordenados += paciente.toString()+"\n";
 		}
+		
 		System.out.println(ordenados);
 	}
 	
