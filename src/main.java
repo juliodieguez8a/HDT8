@@ -4,6 +4,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
 
+/**Universidad Del Valle de Guatemala 
+ *Algoritmos y Estructura de Datos 
+ *Seccion 10- Hoja de Trabajo 8
+ *------------------------------------------------------------------
+ *@author
+ *Pedro Joaquin Castillo 14224
+ *Julio Ronaldo Dieguez 14475
+ *------------------------------------------------------------------
+ *Main del Programa 
+ **/
+
+
 public class main {
 
 	public static void main(String[] args) throws FileNotFoundException {
@@ -33,7 +45,7 @@ public class main {
 		}
 
         
-        System.out.println("\nAtenci髇 de emergencias que usa la implementaci髇 \nproporcionada por el Java Collection Framework\n");
+        System.out.println("\nAtenci贸n de emergencias que usa la implementaci贸n \nproporcionada por el Java Collection Framework\n");
         
         VectorHeap v_heap = new VectorHeap(listado_pacientes);
 		String ordenados="";
@@ -45,7 +57,7 @@ public class main {
 		
 		System.out.println(ordenados);
 		
-		System.out.println("Atenci髇 de emergencias que usa su implementaci髇 de VectorHeap\n");
+		System.out.println("Atenci贸n de emergencias que usa su implementaci贸n de VectorHeap\n");
 		
 		ordenados="";
 		VectorHeap_implementa v_heap2 = new VectorHeap_implementa(listado_pacientes);
